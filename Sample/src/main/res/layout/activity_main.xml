@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.sunzn.rock.library.RackVew
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/bg"
+        app:rv_circle_fill_color="#20FFFFFF"
+        app:rv_max_circle_radius="10"
+        app:rv_gap_circle_square="4"/>
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="开始" />
+
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="停止" />
+
+</LinearLayout>
