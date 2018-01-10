@@ -26,14 +26,14 @@ dependencies {
     app:rv_per_circle_update="150" />
 ```
 
-| Attribute            | Describe                                   | Additional                           |
-| -------------------- | ------------------------------------------ | ------------------------------------ |
-| rv_min_circle_radius | The radius of the outer round rect         | Support dimension and reference      |
-| rv_max_circle_radius | The Fill color of the outer round rect     | Support color                        |
-| rv_gap_circle_square | The radius of the outer notch circle       | Support dimension and reference      |
-| rv_ver_circle_number | The color of the outer notch circle        | Support color                        |
-| rv_per_circle_update | The gap between the inner and outer layers | Support float                        |
-| rv_circle_fill_color | The radius of the inner round rect         | Support dimension and reference      |
+| Attribute            | Describe                                  | Additional                  |
+| -------------------- | ----------------------------------------- | --------------------------- |
+| rv_min_circle_radius | The radius of the top circle              | Support integer             |
+| rv_max_circle_radius | The radius of the bottom circle           | Support integer             |
+| rv_gap_circle_square | The gap between the bottom circle         | Support integer             |
+| rv_ver_circle_number | The max number of circles in the vertical | Support integer             |
+| rv_per_circle_update | Time interval of refresh ui               | Support integer             |
+| rv_circle_fill_color | The color of the circle                   | Support color and reference |
 
 ### License
 ```
