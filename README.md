@@ -9,7 +9,7 @@
 ### Gradle
 ```groovy
 dependencies {
-    compile 'com.github.ShortStickBoy:Rock:V1.0.0'
+    compile 'com.github.ShortStickBoy:Rock:V2.0.0'
 }
 ```
 
