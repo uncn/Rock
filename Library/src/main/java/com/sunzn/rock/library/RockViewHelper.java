@@ -18,13 +18,14 @@ public class RockViewHelper {
     private static final int DEFAULT_MIN_CIRCLE_RADIUS = 5;
     private static final int DEFAULT_MAX_CIRCLE_RADIUS = 15;
     private static final int DEFAULT_VER_CIRCLE_NUMBER = 12;
+    private static final int DEFAULT_PER_CIRCLE_UPDATE = 150;
     private static final int DEFAULT_CIRCLE_FILL_COLOR = 0XFFFF0000;
 
     private Handler handler = new Handler();
     private Runnable runnable = new Runnable() {
         public void run() {
             this.update();
-            handler.postDelayed(this, 150);
+            handler.postDelayed(this, circleUpdatePer);
         }
 
         void update() {
@@ -62,6 +63,9 @@ public class RockViewHelper {
     // 垂直方向最多圆的数量
     private int circleNumberVer;
 
+    // 界面刷新时间间隔
+    private int circleUpdatePer;
+
     // RackVew 边距
     private int viewMargin;
 
@@ -78,6 +82,7 @@ public class RockViewHelper {
         circleMaxRadius = a.getInteger(R.styleable.RackVew_rv_max_circle_radius, DEFAULT_MAX_CIRCLE_RADIUS);
         circleSquareGap = a.getInteger(R.styleable.RackVew_rv_gap_circle_square, DEFAULT_SQUARE_CIRCLE_GAP);
         circleNumberVer = a.getInteger(R.styleable.RackVew_rv_ver_circle_number, DEFAULT_VER_CIRCLE_NUMBER);
+        circleUpdatePer = a.getInteger(R.styleable.RackVew_rv_per_circle_update, DEFAULT_PER_CIRCLE_UPDATE);
         circleFillColor = a.getInteger(R.styleable.RackVew_rv_circle_fill_color, DEFAULT_CIRCLE_FILL_COLOR);
         a.recycle();
         init();
