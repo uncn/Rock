@@ -3,6 +3,8 @@
 [![](https://jitpack.io/v/ShortStickBoy/Rock.svg)](https://jitpack.io/#ShortStickBoy/Rock)
 [![](https://img.shields.io/badge/License-Apache%202.0-orange.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
+Rock is an audio playback beating animation control, you can easily control the various properties of the animation.
+
 ### ScreenShot
 ![sample](./screenshot/Demo.gif)
 
