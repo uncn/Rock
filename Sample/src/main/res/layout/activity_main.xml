@@ -11,9 +11,10 @@
         android:layout_height="250dp"
         android:background="@drawable/bg"
         app:rv_circle_fill_color="#20FFFFFF"
-        app:rv_gap_circle_square="4"
-        app:rv_max_circle_radius="10"
-        app:rv_per_circle_update="150" />
+        app:rv_gap_circle_square="1"
+        app:rv_max_circle_radius="8"
+        app:rv_per_circle_update="250"
+        app:rv_ver_circle_number="15" />
 
     <Button
         android:id="@+id/start"
