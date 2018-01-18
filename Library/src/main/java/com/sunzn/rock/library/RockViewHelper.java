@@ -103,25 +103,50 @@ public class RockViewHelper {
         columnNums = viewWidth / squareSize;
         viewMargin = viewWidth % squareSize;
         points = new int[columnNums];
+        initPoints(points);
+    }
+
+    private void initPoints(int[] points) {
+        for (int i = 0; i < points.length; i++) {
+            points[i] = RackViewRandom.randInt(1, circleNumberVer);
+        }
     }
 
     public void onDraw(Canvas canvas) {
         for (int c = 1; c <= columnNums; c++) {
 
-            int rows = 0;
+            int rows = -1;
             int n = c - 1;
 
-            if (points[n] <= 0 || points[n] >= circleNumberVer) {
-                rows = points[n] = RackViewRandom.randInt(1, circleNumberVer);
-            } else {
-                rows = points[n] = points[n] + 1;
+            rows = points[n] + RackViewRandom.randDot();
+
+            if (rows > 0 && rows <= circleNumberVer) {
+                points[n] = rows;
             }
 
-            for (int r = 1; r <= rows; r++) {
+            for (int r = 1; r <= points[n]; r++) {
                 canvas.drawCircle(getX(c), getY(r), getD(r), circlePaint);
             }
         }
     }
+
+//    public void onDraw(Canvas canvas) {
+//        for (int c = 1; c <= columnNums; c++) {
+//
+//            int rows = 0;
+//            int n = c - 1;
+//
+//            if (points[n] <= 0 || points[n] >= circleNumberVer) {
+//                rows = points[n] = RackViewRandom.randInt(1, circleNumberVer);
+//            } else {
+//                rows = points[n] = points[n] + 1;
+//            }
+//
+//            for (int r = 1; r <= rows; r++) {
+//                canvas.drawCircle(getX(c), getY(r), getD(r), circlePaint);
+//            }
+//        }
+//    }
 
     private int getX(int c) {
         return (int) (viewMargin / 2 + (c - 0.5) * squareSize);
