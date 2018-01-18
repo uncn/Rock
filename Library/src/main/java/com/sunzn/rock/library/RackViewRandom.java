@@ -13,4 +13,9 @@ public class RackViewRandom {
         return rand.nextInt((max - min) + 1) + min;
     }
 
+    public static int randDot() {
+        Random rand = new Random();
+        return rand.nextBoolean() ? -1 : 1;
+    }
+
 }
