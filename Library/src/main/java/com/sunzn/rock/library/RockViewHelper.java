@@ -162,7 +162,7 @@ public class RockViewHelper {
 
     public void start() {
         handler.removeCallbacks(runnable);
-        handler.postDelayed(runnable, 350);
+        handler.postDelayed(runnable, circleUpdatePer);
     }
 
     public void stop() {
